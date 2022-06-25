@@ -1,0 +1,595 @@
+/* Start variables */
+:root {
+    --green-color: #00ce7d;
+    --orange-color: #bd912f;
+}
+/* End variables */
+
+/* Start global rules */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Work Sans', sans-serif;
+    background-color: black;
+    color: white;
+}
+
+.row {
+    margin: 0;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding-left: 0;
+  }
+
+
+.internship-task {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.body-container {
+    width: 95%;
+    margin: auto;
+}
+
+
+/* End global rules */
+
+/* Start media */
+@media screen and (min-width: 700px) and (max-width: 768px) {
+
+    .gold-price:nth-child(1)::after,
+    .gold-price:nth-child(2)::after {
+        right: 14% !important;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 700px) {
+
+    .gold-price:nth-child(1)::after,
+    .gold-price:nth-child(2)::after {
+        right: 16% !important;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .live-metal-price-header div {
+        margin-left: 12px;
+    }
+
+    .gold-price:nth-child(1)::after,
+    .gold-price:nth-child(2)::after {
+        right: 25% !important;
+    }
+
+    .graph span {
+        width: 44% !important;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1499px) {
+
+    .graph span {
+        width: 45% !important;
+    }
+
+    .gold-price .gold-price-content {
+        font-size: 10px !important;
+    }
+
+    .gold-balance-box .gold-balance {
+        font-size: 11px !important;
+    }
+
+}
+@media screen and (min-width: 992px) and (max-width: 1286px) {
+
+    .live-metal-price-header div {
+        font-size: 10px !important;
+        margin-left: 0 !important;
+    }
+
+    .live-metal-price-header div span {
+        right: -15px !important;
+    }
+
+    .form-inputs .price-limit-label {
+        font-size: 9px !important;
+    }
+
+    .gold-price:nth-child(1)::after,
+    .gold-price:nth-child(2)::after {
+        right: 35% !important;
+    }
+
+}
+
+@media screen and (max-width: 991px) {
+
+    .body-container {
+        width: 100% !important;
+    }
+
+    .boxes-container {
+        margin: 20px auto !important;
+    }
+
+    .form-inputs .price-limit-label {
+        font-size: 11px !important;
+    }
+
+}
+
+@media screen and (min-width: 991px) {
+
+    .boxes-container {
+        height: 100% !important;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 885px) {
+
+    .graph span {
+        width: 45% !important;
+    }
+
+    .gold-price:nth-child(1)::after,
+    .gold-price:nth-child(2)::after {
+        right: 24% !important;
+    }
+
+}
+
+@media screen and (max-width: 576px) {
+    .live-metal-price-header div {
+        margin-left: 12px;
+    }
+
+    .body-container {
+        width: 100% !important;
+    }
+
+    .form-inputs .price-limit-label {
+        font-size: 14px !important;
+    }
+    
+}
+
+/* End media */
+/* Start Live Metal Prices box */
+
+.live-metal-price-container,
+.price-charts {
+    border: 1px solid var(--orange-color);
+    border-radius: 5px;
+}
+
+.live-metal-price-header {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.live-metal-price-header h4 {
+    color: var(--orange-color);
+    margin-top: 5px;
+}
+
+.live-metal-price-header div {
+    color: var(--green-color);
+    font-size: 12px;
+    position: relative;
+    margin-left: 12px;
+}
+
+.live-metal-price-header div span {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: var(--green-color);
+    border-radius: 50%;
+    right: -20px;
+    bottom: 1px;
+}
+
+.live-metal-inside-box {
+    width: 90%;
+    margin: auto;
+    border: 1px solid white;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.live-metal-inside-box .metal-name {
+    margin-top: 3px;
+
+}
+
+.gold-price-container {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.gold-price {
+    display: flex;
+    justify-content: space-between;
+}
+
+.gold-price .gold-price-content {
+    font-size: 12px;
+}
+
+.gold-price:nth-child(1) {
+    color: var(--green-color);
+}
+.gold-price:nth-child(2) {
+    color: red
+}
+
+.gold-price:nth-child(1), 
+.gold-price:nth-child(2) {
+    position: relative;
+}
+.gold-price:nth-child(1)::after,
+.gold-price:nth-child(2)::after {
+    content: "";
+    position: absolute;
+    border: 5px solid;
+    right: 26%;
+    border-color: transparent transparent var(--green-color);
+}
+
+.gold-price:nth-child(1)::after {
+    border-color: transparent transparent var(--green-color) ;
+}
+.gold-price:nth-child(2)::after {
+    border-color: red transparent transparent ;
+    bottom: 1%;
+
+}
+
+.daily-change {
+    margin-top: 15px;
+    font-size: 10px;
+    text-align: end;
+    padding: 10px 20px;
+    font-style: italic;
+    color: var(--orange-color);
+}
+
+/* End Live Metal Prices box */
+/* Start price chart box */
+
+.price-charts {
+    margin-top: 20px;
+}
+
+.price-charts-header {
+    margin: 10px 0px;
+    color: var(--orange-color);
+}
+
+.price-charts-header span {
+    color: white;
+}
+
+.price-charts-header span {
+    position: relative;
+}
+
+.price-charts-header span::after {
+    content: "";
+    position: absolute;
+    border: 8px solid;
+    border-color: white transparent transparent;
+    bottom: 0;
+    left: 60px;
+}
+
+.choose-how-often {
+    margin: 5px 8px 15px;
+    background-color: transparent;
+}
+
+.days-dropdown {
+    border-color: var(--orange-color);
+    padding: 5px 15px 5px 10px;
+    background-color: transparent;
+    color: white;
+    border-radius: 5px;
+}
+
+/* End price chart box */
+/* Start instant-buy-sell box */
+
+.boxes-container {
+    width: 95%;
+    margin: 0 auto;
+    border: 1px solid var(--orange-color);
+    border-radius: 5px;
+}
+
+.second-box-header {
+    margin-top: 5px;
+    margin-bottom: 40px;
+    color: var(--orange-color);
+}
+
+.buy-sell-btns-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0 30px;
+}
+
+.buy-sell-btns {
+    background-color: #464545;
+    width: 48%;
+    padding-top: 5px;
+    padding-bottom: 15px;
+    color: white;
+    font-size: 22px;
+    border-radius: 5px;
+    opacity: 30%;
+    text-transform: uppercase;
+}
+
+.buy-sell-btns-container .buy-sell-btns.clicked {
+    opacity: 100%;
+    position: relative;
+ }
+ .buy-sell-btns-container .buy-sell-btns.clicked::after {
+    
+     content: "";
+     position: absolute;
+     width: 100%;
+     height: 15%;
+     left: 0;
+     background-color: var(--orange-color);
+     bottom: 0;
+ 
+ }
+
+.form-dropdown .form-select {
+    width: 100%;
+    border-color: white;
+    padding: 10px 15px 10px 10px;
+    background-color: transparent;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.form-dropdown .form-select:focus {
+    box-shadow: 0 0 0 transparent !important;
+}
+
+.input-group {
+    margin-bottom: 10px !important;
+}
+
+.input-span {
+    background-color: transparent;
+    border-color: white transparent white white;
+    padding: 10px 10px;
+}
+
+.form-inputs {
+    position: relative;
+    margin-bottom: 10px
+}
+
+.form-inputs .form-label {
+    position: absolute;
+    top: 50%;
+    left: 3%;
+    transform: translate(-2%, -50%);
+}
+
+.form-inputs .price-limit-label {
+    left: 6%;
+    transform: translate(-4%, -50%);
+}
+
+.form-inputs .form-input,
+.form-inputs .form-control:focus {
+    background-color: transparent;
+    border-color: white;
+}
+
+.form-inputs .form-input {
+    text-align: end;
+    color: white;
+    height: 46px;
+}
+
+.form-inputs .form-control:focus {
+    box-shadow: 0 0 0 0.25rem transparent;
+    border-color: white;
+}
+
+.dropdown-input-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dropdown-input-container .dropdown-input {
+    width: 48%;
+}
+
+.order-value-input {
+    background-color: #464545;
+    margin-bottom: 60px !important;
+}
+
+.reset-preview-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 20px;
+}
+
+.reset-preview-container .reset-preview-btns {
+    width: 30%;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+}
+
+.reset-preview-container .reset-preview-btns.reset-btn {
+    background-color: #8f8f8f;
+}
+
+.reset-preview-container .reset-preview-btns.preview-btn {
+    background-color: #00ce7d;
+}
+
+/* End instant-buy-sell box */
+/* Start account balance box */
+
+.account-balance {
+    width: 95%;
+    margin: auto;
+    border: 1px solid var(--orange-color);
+    border-radius: 5px;
+}
+
+.account-balance-navbar nav {
+    background-color: transparent !important;
+    padding: 0 !important;
+}
+
+.account-balance-navbar nav .navbar-brand {
+    color:var(--orange-color) !important;
+}
+
+.account-balance-navbar nav .navbar-toggler {
+    border-color: transparent;
+    color: var(--orange-color) !important;
+}
+
+.navbar-dark .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28189, 145, 47, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.gold-balance-box {
+    border: 1px solid white;
+    border-radius: 5px;
+    margin: 15px 0px;
+    padding: 8px 0px;
+}
+
+.gold-balance:nth-child(1) {
+    font-weight: bold;
+}
+
+.gold-balance-box .gold-balance {
+    display: flex;
+    justify-content: space-between;
+}
+
+.gold-balance-container {
+    margin-top: 5px;
+}
+
+
+.gold-balance-container .gold-balance-header {
+    color: var(--orange-color);
+}
+
+.account-balance-boxes {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 10px 10px 18px;
+    margin-bottom: 15px;
+}
+
+.form-input[value] {
+    line-height: 50%;
+}
+/* End account balance box */
+/* Start Chart */
+
+.chart-header {
+    color: #777;
+}
+    
+.font-color {
+    color: #9099b7;
+}
+.block {
+    background: #0a0a0a;
+    border-radius: 5px;
+    width: 100%;
+    height: 20vh;
+}
+     
+.line-chart {
+    height: 100%;
+}
+  
+.graph {
+    height: 100%;
+    position: relative;
+    color: var(--orange-color);
+    font-size: 80%;
+}
+.graph span {
+    display: block;
+    position: absolute;
+    bottom: 10%;
+    left: 25%;
+    height: 0;
+    border-top: 2px solid;
+    transform-origin: left center;
+}
+  .graph span > span {
+    left: 100%; bottom: 0;
+  }
+  [data-value='912.8'] {width: 95px; transform: rotate(-45deg);}
+  [data-value='912.6'] {width: 24px; transform: rotate(65deg);}
+  [data-value='912.4'] {width: 39px; transform: rotate(-45deg);}
+  [data-value='912.2'] {width: 15px; transform: rotate(50deg);}
+  [data-value='912.0'] {width: 69px; transform: rotate(-70deg);}
+  [data-value='911.8'] {width: 36px; transform: rotate(75deg);}
+  
+  
+  [class^='plot-'] {
+    position: absolute;
+    left: 1%;
+    bottom: 26%;
+    width: 100%;
+    padding: 2rem 1rem 0 3rem;
+    height: 80%;
+  }
+  .plot-y li {
+    height: 25%;
+    border-top: 1px solid #777;
+  }
+  [data-plotY]:before {
+    content: attr(data-plotY);
+    display: inline-block;
+    width: 2rem;
+    text-align: right;
+    line-height: 0;
+    position: relative;
+    left: -2.5rem;
+    top: -.5rem;
+  } 
+  .plot-x li {
+    width: 33%;
+    float: left;
+    text-align: center;
+  }
+
+  /* End Chart */

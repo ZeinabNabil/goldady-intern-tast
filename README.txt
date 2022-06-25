@@ -1,0 +1,1 @@
+you should go to index.html file and open it to view project in your browser
